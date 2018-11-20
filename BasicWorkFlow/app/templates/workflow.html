@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <form class="form-signin"  role="form">
-            <h2 class="form-signin-heading">Please input list number:</h2>
+            <h2 class="form-signin-heading">Please input list number():</h2>
             <label>list number</label>
             <input type="text" id="inputUsername" name="listnumber" class="form-control">
             <label>number loop</label>
@@ -30,16 +30,22 @@
                 dataType: "json",
                 data: $('form').serialize(),
                 success: function(data){
-                    var listeven;
-                    var listodd;
-                    for (i = 0; i < data['even'].length; i++){
-                        listeven+="<b>"+data['even'][i] +" </b>"
+                    if (data['status']==200){
+                        var listeven;
+                        var listodd;
+                        for (i = 0; i < data['even'].length; i++){
+                            listeven+="<b>"+data['even'][i] +" </b>"
+                        }
+                         for (i = 0; i < data['odd'].length; i++){
+                            listodd+="<b>"+data['odd'][i]+" </b>"
+                        }
+                        $("#even").append(listeven);
+                        $("#odd").append(listodd);   
                     }
-                     for (i = 0; i < data['odd'].length; i++){
-                        listodd+="<b>"+data['odd'][i]+" </b>"
+                    else
+                    {
+                        alert("ERROR"+data.error+"!");
                     }
-                    $("#even").append(listeven);
-                    $("#odd").append(listodd);    
                 }
             })
         });

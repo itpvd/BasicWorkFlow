@@ -10,8 +10,13 @@ def workflowpage():
 
 @app.route('/workflow', methods=['POST'])
 def hello_world3(name=None):
-    input = request.form
-    lists = input['listnumber'].split(" ")
-    listnumber=[int(x) for x in lists]
-    result = Loop.loop(int(input['numberloop']),Check.check(listnumber))
-    return json.dumps(result);
+    try:
+        input = request.form
+        lists = input['listnumber'].split(" ")
+        listnumber=[int(x) for x in lists]
+        result = Loop.loop(int(input['numberloop']),Check.check(listnumber))
+        result['status']='200'
+        return json.dumps(result);
+    except Exception as exception:
+        return json.dumps({'error':type(exception).__name__});
+   
