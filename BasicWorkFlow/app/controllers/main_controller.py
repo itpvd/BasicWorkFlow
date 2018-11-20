@@ -13,5 +13,5 @@ def hello_world3(name=None):
     input = request.form
     lists = input['listnumber'].split(" ")
     listnumber=[int(x) for x in lists]
-    result = Loop.loop(int(input['numberloop']),Loop.check(listnumber))
+    result = Loop.loop(int(input['numberloop']),Check.check(listnumber))
     return json.dumps(result);

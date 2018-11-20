@@ -11,3 +11,4 @@ class Check():
             else:
                 dict['odd'].append(array)
         return dict
+        

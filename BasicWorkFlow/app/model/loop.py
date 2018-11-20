@@ -1,6 +1,5 @@
 
-from app.model.check import Check
-class Loop(Check):
+class Loop():
     def __init__(self):
         pass
     def loop(n,dict):
@@ -21,6 +20,3 @@ class Loop(Check):
                     break
             dict['odd'][index]=array
         return dict
-    def abc():
-        array=[2,3,4,5,6,7,8]
-        return self.check(array)
