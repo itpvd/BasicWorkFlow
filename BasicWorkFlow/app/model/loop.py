@@ -1,7 +1,4 @@
-
 class Loop():
-    def __init__(self):
-        pass
     def loop(n,dict):
         for array in dict['even']:
             index = (dict['even'].index(array))
