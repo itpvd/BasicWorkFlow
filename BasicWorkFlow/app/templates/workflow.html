@@ -32,14 +32,12 @@
                 success: function(data){
                     var listeven;
                     var listodd;
-                    console.log(data);
                     for (i = 0; i < data['even'].length; i++){
-                        listeven+="<p>"+data['even'][i]+"</p>"
+                        listeven+="<b>"+data['even'][i] +" </b>"
                     }
                      for (i = 0; i < data['odd'].length; i++){
-                        listodd+="<p>"+data['odd'][i]+"</p>"
+                        listodd+="<b>"+data['odd'][i]+" </b>"
                     }
-                    console.log(data['even'][1])
                     $("#even").append(listeven);
                     $("#odd").append(listodd);    
                 }
