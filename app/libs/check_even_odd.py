@@ -1,5 +1,5 @@
-class Check():
-    def check(arrays):
+class CheckEvenOdd():
+    def checkEvenOdd(arrays):
         dict={}
         dict['even']=[]
         dict['odd']=[]
@@ -9,3 +9,4 @@ class Check():
             else:
                 dict['odd'].append(array)
         return dict
+
