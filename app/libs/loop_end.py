@@ -9,4 +9,3 @@ class LoopEnd():
     #condition loop end of number odd
     def loopEndOdd(i):
         return i < const.LOOP_END_ODD
-

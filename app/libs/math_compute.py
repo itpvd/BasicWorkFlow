@@ -6,4 +6,3 @@ class MathCompute():
     #math compute with odd
     def mathComputeOdd(i):
         return i-2
-

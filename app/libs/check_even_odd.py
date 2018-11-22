@@ -10,4 +10,3 @@ class CheckEvenOdd():
             else:
                 dict['odd'].append(array)
         return dict
-

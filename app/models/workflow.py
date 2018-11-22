@@ -4,3 +4,4 @@ class WorkFlow():
         self.loopStart=loopStart
         self.loopEnd=loopEnd
         self.mathCompute=mathCompute
+        
