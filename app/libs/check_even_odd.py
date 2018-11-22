@@ -1,4 +1,5 @@
 class CheckEvenOdd():
+    #function check number even and number odd from array
     def checkEvenOdd(arrays):
         dict={}
         dict['even']=[]

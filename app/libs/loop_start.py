@@ -5,6 +5,7 @@ from app.libs.math_compute import MathCompute
 
 
 class LoopStart():
+    #start loop with n: number loop and array: array need handle
     def loopStart(n,array):
         dict = CheckEvenOdd.checkEvenOdd(array)
         for array in dict['even']:

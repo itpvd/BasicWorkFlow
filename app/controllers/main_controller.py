@@ -3,12 +3,13 @@ from app import app
 from app.libs.loop_start import LoopStart
 import app.configs.constant as const
 
-
+#workflow page
 @app.route('/')
 @app.route('/workflowpage')
 def workflowpage():
     return render_template('workflow.html')
 
+#handle workflow
 @app.route('/workflow', methods=['POST'])
 def workflow():
     try:
